@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <script src="app.js" defer></script>
     <title>Dashboard</title>
 </head>
@@ -15,103 +18,110 @@
         <div class="sidebar">
             <div class="dashboardHome">DASHBOARD</div>
 
-            <div class="navIcons">
-                <ul class="pagesIcons">
-                    <li>H</li>
-                    <li>P</li>
-                    <li>M</li>
-                    <li>H</li>
-                    <li>T</li>
-                    <li>C</li>
+            <div class="nav">
+                <ul class="pages">
+                    <li><a href=""><ion-icon name="home-sharp"></ion-icon>Home</a></li>
+                    <li><a href=""><ion-icon name="person-circle-sharp"></ion-icon>Profile</a></li>
+                    <li><a href=""><ion-icon name="mail-sharp"></ion-icon>Messages</a></li>
+                    <li><a href=""><ion-icon name="time-sharp"></ion-icon>History</a></li>
+                    <li><a href=""><ion-icon name="list-sharp"></ion-icon>Tasks</a></li>
+                    <li><a href=""><ion-icon name="people-sharp"></ion-icon>Communities</a></li>
                 </ul>
 
-                <ul class="maintenancePagesIcons">
-                    <li>S</li>
-                    <li>S</li>
-                    <li>P</li>
-                </ul>
-            </div>
-
-            <div class="navTitles">
-                <ul class="pagesTitles">
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
-                </ul>
-
-                <ul class="maintenancePagesTitles">
-                    <li>Setting</li>
-                    <li>Support</li>
-                    <li>Privacy</li>
+                <ul class="maintenancePages">
+                    <li><a href=""><ion-icon name="settings-sharp"></ion-icon>Setting</a></li>
+                    <li><a href=""><ion-icon name="information-sharp"></ion-icon>Support</a></li>
+                    <li><a href=""><ion-icon name="finger-print-sharp"></ion-icon></ion-icon>Privacy</a></li>
                 </ul>
             </div>
 
         </div>
 
         <div class="header">
-            <div class="searchbar">SEARCH BAR WILL GO HERE</div>
+            <input class="searchbar" name="search" type="search" placeholder="Search...">
             <div class="userProfile">
-                <div class="notifications">X</div>
+                <div class="notifications"><ion-icon name="notifications-sharp"></ion-icon></div>
                 <img class="userPicTop" src="img/user-2.png" alt="placeholder">
-                <div class="userName">Username</div>
+                <h2 class="userName">Username</h2>
             </div>
 
             <div class="userWelcome">
                 <img class="userPic" src="img/user-2.png" alt="placeholder">
                 <p class="greeting">Hi there,</p>
-                <div class="userNameTitle">Username (@username)</div>
+                <h1 class="userNameTitle">Username (@username)</h1>
             </div>
 
             <div class="actionButtons">
-                <button id="newBtn">New</button>
-                <button id="uploadBtn">Upload</button>
-                <button id="shareBtn">Share</button>
+                <button class="btn" id="newBtn">New</button>
+                <button class="btn" id="uploadBtn">Upload</button>
+                <button class="btn" id="shareBtn">Share</button>
             </div>
         </div>
 
         <div class="content">
 
             <div class="projects">
-                <div class="sectionTitle">MY PROJECTS</div>
+                <h1 class="sectionTitle">MY PROJECTS</h1>
 
                 <div class="item">
-                    <p class="projectTitle">Project Title!</p>
-                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
-                    <div class="projIcons">ICON ICON ICON</div>
+                    <div class="card">
+                        <h2 class="projectTitle">Project Title!</h2>
+                        <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                        <div class="projIcons"><ion-icon name="heart-sharp"></ion-icon> <ion-icon name="eye-sharp"></ion-icon> <ion-icon name="share-social-sharp"></ion-icon></div>
+                    </div>
+                    <div class="card-border"></div>
                 </div>
+
                 <div class="item">
-                    <p class="projectTitle">Project Title!</p>
-                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
-                    <div class="projIcons">ICON ICON ICON</div>
+                    <div class="card">
+                        <h2 class="projectTitle">Project Title!</h2>
+                        <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                        <div class="projIcons"><ion-icon name="heart-sharp"></ion-icon> <ion-icon name="eye-sharp"></ion-icon> <ion-icon name="share-social-sharp"></ion-icon></div>
+                    </div>
+                    <div class="card-border"></div>
                 </div>
+
                 <div class="item">
-                    <p class="projectTitle">Project Title!</p>
-                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
-                    <div class="projIcons">ICON ICON ICON</div>
+                    <div class="card">
+                        <h2 class="projectTitle">Project Title!</h2>
+                        <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                        <div class="projIcons"><ion-icon name="heart-sharp"></ion-icon> <ion-icon name="eye-sharp"></ion-icon> <ion-icon name="share-social-sharp"></ion-icon></div>
+                    </div>
+                    <div class="card-border"></div>
                 </div>
+
                 <div class="item">
-                    <p class="projectTitle">Project Title!</p>
-                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
-                    <div class="projIcons">ICON ICON ICON</div>
+                    <div class="card">
+                        <h2 class="projectTitle">Project Title!</h2>
+                        <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                        <div class="projIcons"><ion-icon name="heart-sharp"></ion-icon> <ion-icon name="eye-sharp"></ion-icon> <ion-icon name="share-social-sharp"></ion-icon></div>
+                    </div>
+                    <div class="card-border"></div>
                 </div>
+
                 <div class="item">
-                    <p class="projectTitle">Project Title!</p>
-                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
-                    <div class="projIcons">ICON ICON ICON</div>
+                    <div class="card">
+                        <h2 class="projectTitle">Project Title!</h2>
+                        <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                        <div class="projIcons"><ion-icon name="heart-sharp"></ion-icon> <ion-icon name="eye-sharp"></ion-icon> <ion-icon name="share-social-sharp"></ion-icon></div>
+                    </div>
+                    <div class="card-border"></div>
                 </div>
+
                 <div class="item">
-                    <p class="projectTitle">Project Title!</p>
-                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
-                    <div class="projIcons">ICON ICON ICON</div>
+                    <div class="card">
+                        <h2 class="projectTitle">Project Title!</h2>
+                        <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                        <div class="projIcons"><ion-icon name="heart-sharp"></ion-icon> <ion-icon name="eye-sharp"></ion-icon> <ion-icon name="share-social-sharp"></ion-icon></div>
+                    </div>
+                    <div class="card-border"></div>
                 </div>
+
             </div>
 
             <div class="news">
                 <div class="announcements">
-                    <div class="sectionTitle">ANNOUNCEMENTS</div>
+                    <h1 class="sectionTitle">ANNOUNCEMENTS</h1>
                     <div class="announcement">
                         <p class="annoucementTitle">Site Maintenance</p>
                         <p class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. </p>
@@ -127,7 +137,7 @@
                 </div>
 
                 <div class="trending">
-                    <div class="sectionTitle">TRENDING</div>
+                    <h1 class="sectionTitle">TRENDING</h1>
                     <div class="trendingItem">
                         <img class="trendIcon" src="img/user-1.png">
                         <p class="trendUser">@USERNAME</p>
@@ -154,6 +164,9 @@
 
     </div>
 
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

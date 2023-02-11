@@ -1,4 +1,58 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --head-font: 'Montserrat', sans-serif;
+    --body-font: 'Source Code Pro', monospace;
+    --radial-gradient: radial-gradient(circle, #d44f4f, #db6748, #df7e43, #df9544, #dcac4b, #e8a852, #f3a45b, #fda065, #ff8486, #eb77ae, #b57bce, #5e83d8);
+    --linear-gradient: linear-gradient(to right, #d44f4f, #db6748, #df7e43, #df9544, #dcac4b, #e8a852, #f3a45b, #fda065, #ff8486, #eb77ae, #b57bce, #5e83d8);
+}
 
 * {
     box-sizing: border-box;
@@ -6,42 +60,75 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 .container {
+    /* height: auto; */
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 150px 100%;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
 }
 
 .sidebar {
-    background-color: yellow;
+    background-color: black;
+    color: white;
+    font-family: var(--head-font);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
     display: grid;
     grid-column-start: 1;
     grid-row: 1 / last-line;
     gap: 5px;
-    grid-template-rows: 50px 1fr 1fr;
-    grid-template-columns: 50px 1fr;
-    grid-template-areas: 
-        "dashboardHome dashboardHome"
-        "navIcons navTitles";
+    grid-template-rows: max-content;
 }
 
-.navIcons {
-    grid-area: navIcons;
+.nav {
+    margin-top: 25px;
+    padding: 5px;
+    text-justify: center;
 }
 
-.navTitles {
-    grid-area: navTitles;
+li {
+    padding-bottom: 10px;
+}
+
+a > ion-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    padding-bottom: 0;
+}
+
+a,
+a:link,
+a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    background: linear-gradient(to right, #d44f4f, #db6748, #df7e43, #df9544, #dcac4b, #e8a852, #f3a45b, #fda065, #ff8486, #eb77ae, #b57bce, #5e83d8);
 }
 
 ul {
+    position: relative;
     list-style: none;
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .header {
-    background-color: pink;
+    background-image: var(--radial-gradient);
+    padding: 15px;
+    gap: 5px;
+    font-family: var(--head-font);
     grid-row-start: 1;
     grid-column-start: 2;
     display: grid;
@@ -54,11 +141,49 @@ ul {
 
 .searchbar {
     grid-area: searchbar;
+    background-color: #dddddd;
+    color: #242424;
+    width: 70%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    padding: .15rem .5rem;
+    min-height: 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
 }
+
+.searchbar:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+      
+.searchbar:hover {
+    outline: 1px solid lightgrey;
+}
+
+img {
+    border: 2px solid white;
+    border-radius: 50px;
+    box-shadow: 0 1px 0 1px #000;
+}
+
+img:hover {
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .userProfile {
     grid-area: userProfile;
     display: grid;
+    justify-content: space-around;
     grid-template-areas: 
         "notifications userPicTop userName";
 }
@@ -71,15 +196,21 @@ ul {
         "userPic userNameTitle";
 }
 
-
 .userPic {
     grid-area: userPic;
     justify-self: center;
     align-self: center;
 }
 
+.greeting {
+    padding-bottom: 10px;
+    align-self: flex-end;
+}
+
 .userNameTitle {
     grid-area: userNameTitle;
+    color: black;
+    font-size: 28px;
 }
 
 .actionButtons {
@@ -91,9 +222,48 @@ ul {
 }
 
 .actionButtons > button {
-    border-radius: 100px;
-    border-style: none;
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #fff;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
 }
+
+.btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #df9544;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+   
+.btn:hover {
+    background-color: #eb77ae;
+    color: #fff;
+    border-color: #000;
+    box-shadow: 0 2px 0 2px #fff;
+}
+   
+.btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+   
+.btn:active {
+    transform: scale(0.9);
+}
+
 
 .content {
     margin: 10px;
@@ -104,15 +274,22 @@ ul {
     grid-template: max-content / 1fr 250px;
 }
 
+h1 {
+    font-family: var(--head-font);
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .projects {
     display: grid;
-    gap: 15px;
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: max-content;
 }
 
 .news {
     display: grid;
+    gap: 10px;
     grid-auto-rows: max-content;
     grid-template-columns: 1fr;
 }
@@ -123,35 +300,57 @@ ul {
 }
 
 .item {
-    background-color: lightseagreen;
     padding: 5px;
     display: grid;
     height: 200px;
 }
 
 .announcements {
-    background-color: grey;
     display: grid;
     gap: 10px;
     padding: 10px;
 }
 
 .announcement {
-    padding: 5px;
+    padding: 10px;
+    font-family: var(--body-font);
+    font-size: 14px;
+    margin: 5px;
+    background: white;
+    border: 1px dashed #000;
+    color: #131313;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #fff;
 }
 
 .trending {
-    background-color: blanchedalmond;
     padding: 10px;
 }
 
 .trendingItem {
+    font-family: var(--body-font);
+    font-size: 14px;
     display: grid;
     padding: 5px;
+    margin: 5px;
     grid-template-columns: 75px 1fr;
     grid-template-areas: 
         "trendIcon trendUser"
         "trendIcon userTitle";
+    background: white;
+    border: 1px dashed #000;
+    color: #131313;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.trendingItem:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
 }
 
 .trendIcon {
@@ -160,7 +359,55 @@ ul {
     align-self: center;
 }
 
-.userTitle,
-.trendUser {
-    /* padding-left: 5px; */
+.item {
+    position: relative;
 }
+
+.item:hover {
+    background: linear-gradient(to right, #d44f4f, #db6748, #df7e43, #df9544, #dcac4b, #e8a852, #f3a45b, #fda065, #ff8486, #eb77ae, #b57bce, #5e83d8);
+}
+
+.card {
+    position: relative;
+    background: white;
+    padding: 16px;
+    border: 1px solid #232323;
+    transition: all .5s ease-in-out;
+    font-family: var(--body-font);
+    font-size: 14px;
+ }
+  
+.card-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 1px dashed #232323;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.projectTitle {
+    font-family: var(--head-font);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card:hover {
+    transform: translate(-15px, -15px);
+    /* transform: scale(1.05); */
+    border-color: #C65411;
+}
+
+.projIcons {
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 18px;
+}
+
+   
+   
