@@ -6,16 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <title>Document</title>
+    <title>Dashboard</title>
 </head>
-
+  
 <body>
 
     <div class="container">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
+        <div class="sidebar">
+            <div class="dashboardHome">DASHBOARD</div>
+
+            <div class="navIcons">
+                <ul class="pagesIcons">
+                    <li>H</li>
+                    <li>P</li>
+                    <li>M</li>
+                    <li>H</li>
+                    <li>T</li>
+                    <li>C</li>
+                </ul>
+
+                <ul class="maintenancePagesIcons">
+                    <li>S</li>
+                    <li>S</li>
+                    <li>P</li>
+                </ul>
+            </div>
+
+            <div class="navTitles">
+                <ul class="pagesTitles">
+                    <li>Home</li>
+                    <li>Profile</li>
+                    <li>Messages</li>
+                    <li>History</li>
+                    <li>Tasks</li>
+                    <li>Communities</li>
+                </ul>
+
+                <ul class="maintenancePagesTitles">
+                    <li>Setting</li>
+                    <li>Support</li>
+                    <li>Privacy</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="header">
+            <div class="searchbar">SEARCH BAR WILL GO HERE</div>
+            <div class="userProfile">
+                <div class="notifications">X</div>
+                <img class="userPicTop" src="img/user-2.png" alt="placeholder">
+                <div class="userName">Username</div>
+            </div>
+
+            <div class="userWelcome">
+                <img class="userPic" src="img/user-2.png" alt="placeholder">
+                <p class="greeting">Hi there,</p>
+                <div class="userNameTitle">Username (@username)</div>
+            </div>
+
+            <div class="actionButtons">
+                <button id="newBtn">New</button>
+                <button id="uploadBtn">Upload</button>
+                <button id="shareBtn">Share</button>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="projects">
+                <div class="sectionTitle">MY PROJECTS</div>
+
+                <div class="item">
+                    <p class="projectTitle">Project Title!</p>
+                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                    <div class="projIcons">ICON ICON ICON</div>
+                </div>
+                <div class="item">
+                    <p class="projectTitle">Project Title!</p>
+                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                    <div class="projIcons">ICON ICON ICON</div>
+                </div>
+                <div class="item">
+                    <p class="projectTitle">Project Title!</p>
+                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                    <div class="projIcons">ICON ICON ICON</div>
+                </div>
+                <div class="item">
+                    <p class="projectTitle">Project Title!</p>
+                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                    <div class="projIcons">ICON ICON ICON</div>
+                </div>
+                <div class="item">
+                    <p class="projectTitle">Project Title!</p>
+                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                    <div class="projIcons">ICON ICON ICON</div>
+                </div>
+                <div class="item">
+                    <p class="projectTitle">Project Title!</p>
+                    <p class="projectDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. Quisque eleifend quis lacus quis fermentum. Proin dolor sem, consectetur at nunc vitae, dignissim scelerisque.</p>
+                    <div class="projIcons">ICON ICON ICON</div>
+                </div>
+            </div>
+
+            <div class="news">
+                <div class="announcements">
+                    <div class="sectionTitle">ANNOUNCEMENTS</div>
+                    <div class="announcement">
+                        <p class="annoucementTitle">Site Maintenance</p>
+                        <p class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. </p>
+                    </div>
+                    <div class="announcement">
+                        <p class="annoucementTitle">Community Share Day</p>
+                        <p class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. </p>
+                    </div>
+                    <div class="announcement">
+                        <p class="annoucementTitle">Updated Privacy Policy</p>
+                        <p class="announcementText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tortor nec nulla posuere convallis. </p>
+                    </div>
+                </div>
+
+                <div class="trending">
+                    <div class="sectionTitle">TRENDING</div>
+                    <div class="trendingItem">
+                        <img class="trendIcon" src="img/user-1.png">
+                        <p class="trendUser">@USERNAME</p>
+                        <p class="userTitle">Super Cool Text</p>
+                    </div>
+                    <div class="trendingItem">
+                        <img class="trendIcon" src="img/user-2.png">
+                        <p class="trendUser">@USERNAME</p>
+                        <p class="userTitle">Super Cool Text</p>
+                    </div>
+                    <div class="trendingItem">
+                        <img class="trendIcon" src="img/user-3.png">
+                        <p class="trendUser">@USERNAME</p>
+                        <p class="userTitle">Super Cool Text</p>
+                    </div>
+                    <div class="trendingItem">
+                        <img class="trendIcon" src="img/user-1.png">
+                        <p class="trendUser">@USERNAME</p>
+                        <p class="userTitle">Super Cool Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
